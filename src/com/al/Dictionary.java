@@ -10,10 +10,10 @@ import java.util.stream.Stream;
 
 public class Dictionary {
 
-    private static Set<String> words = new HashSet<String>();
+    private static Set<String> words = new HashSet<>();
 
     static {
-        String fileName = "C://Users/Rong/Downloads/words.txt";
+        String fileName = "resource/words.txt";
         try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
             words = stream
                     .map(String::toLowerCase)
